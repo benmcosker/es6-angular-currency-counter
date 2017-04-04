@@ -1,18 +1,18 @@
 import BootstrapComponent from './bootstrap.component';
 import '../footer/footer.module';
 import '../header/header.module';
-import '../navigation/navigation.module';
-import '../../services/users/users.module';
+import '../../services/conversion/conversion.module';
+import '../../services/odd/odd.module';
+import '../../services/regex/regex.module';
 import '../../views/home/home.module';
-import '../../views/users/users.module';
 
 export default angular
   .module('tgh.component.bootstrap', [
     'tgh.component.footer',
     'tgh.component.header',
-    'tgh.component.navigation',
-    'tgh.service.users',
-    'tgh.view.home',
-    'tgh.view.users'
+    'tgh.service.odd',
+    'tgh.service.regex',
+    'tgh.service.conversion',
+    'tgh.view.home'
   ])
   .directive('tghBootstrap', () => new BootstrapComponent());

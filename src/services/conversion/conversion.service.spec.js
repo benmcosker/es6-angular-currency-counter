@@ -1,18 +1,18 @@
-import UsersService from './users.service';
+import ConversionService from './conversion.service';
 
-describe('tgh.services.users', () => {
-  let usersService;
+xdescribe('tgh.services.conversion', () => {
+  let conversionService;
 
   beforeEach(inject(function() {
-    usersService = new UsersService();
+    conversionService = new ConversionService();
   }));
 
   afterEach(function() {
-    usersService = null;
+    conversionService = null;
   });
 
-  it('should test the service exists', () => {
-    expect(UsersService).toBeDefined();
+  xit('should test the service exists', () => {
+    expect(ConversionService).toBeDefined();
     expect(usersService).toBeDefined();
     expect(usersService.getUsers).toBeDefined();
     expect(usersService.getPrimaryUser).toBeDefined();
@@ -20,7 +20,7 @@ describe('tgh.services.users', () => {
     expect(usersService.deleteUser).toBeDefined();
   });
 
-  it('should test that first call to getUsers returns expected default users', () => {
+  xit('should test that first call to getUsers returns expected default users', () => {
     let users = usersService.getUsers();
 
     expect(users.length).toBe(2);
@@ -36,8 +36,8 @@ describe('tgh.services.users', () => {
     expect(users[1].isPrimary).toBe(false);
   });
 
-  it('should test that getPrimaryUser call works as expected', () => {
-    let primaryUser = new UsersService().getPrimaryUser();
+  xit('should test that getPrimaryUser call works as expected', () => {
+    let primaryUser = new ConversionService().getPrimaryUser();
 
     expect(primaryUser.id).toBe(1);
     expect(primaryUser.firstName).toBe('Owen');
@@ -45,7 +45,7 @@ describe('tgh.services.users', () => {
     expect(primaryUser.isPrimary).toBe(true);
   });
 
-  it('should test that addUsers call works as expected', () => {
+  xit('should test that addUsers call works as expected', () => {
     let users = [];
     let found = false;
     let newUser = {
@@ -69,7 +69,7 @@ describe('tgh.services.users', () => {
     expect(found).toBe(true);
   });
 
-  it('should test that getPrimaryUser call works as expected', () => {
+  xit('should test that getPrimaryUser call works as expected', () => {
     let primaryUser = usersService.getPrimaryUser();
 
     expect(primaryUser.id).toBe(1);
@@ -78,7 +78,7 @@ describe('tgh.services.users', () => {
     expect(primaryUser.isPrimary).toBe(true);
   });
 
-  it('should test that deleteUsers call works as expected when starting with default users', () => {
+  xit('should test that deleteUsers call works as expected when starting with default users', () => {
     let users = [];
     let user = {};
     let newUser = {
