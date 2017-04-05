@@ -1,8 +1,7 @@
 # angularjs-webpack-seed (seed-webapp-1.0)
-AngularJS and Webpack Seed Project for The Greenhouse, as a template / starter project for frontend web applications.
-This is a simple starter project meant to get you up and running as fast as possible with a full local and production
-build with all the tools working together and as minimal friction and configuration as possible.  Simply clone the
-repo and edit the files as needed to match your project.
+Adaption of the AngularJS and Webpack Seed Project for The Greenhouse that retools a basic Angular ES5 test and moves it into ES6.  For reference the 
+Grteenhouse project lives at:
+https://github.com/thegreenhouseio/angularjs-webpack-seed
 
 ## Tooling
 The following tools are used in the application
@@ -18,12 +17,7 @@ The following tools are used in the application
 [Webpack]: https://webpack.github.io/
 
 ## Links
-* Repository (Github)- **TODO: your-link-here**
-* Issue Tracker (JIRA) - **TODO: your-link-here**
-* Documentation (Confluence) - **TODO: your-link-here**
-* Continuous Integration (Jenkins) - **TODO: your-link-here**
-* Development Environment - **TODO: your-link-here**
-* Production Enviornment - **TODO: your-link-here**
+* Repository (Github)- https://github.com/benmcosker/es6-angular-currency-counter
 
 ## Project Setup
 **Note**: It is recommended that a Javascript based IDE is used, like [Webstorm][],
@@ -103,13 +97,7 @@ $ yarn run build
 ```
 
 ###  Testing
-Testing is an important part of software development.  There are three types of automated testing supported:
-
-1. Unit - Used for testing discrete pieces of code in an isolated environemnt (i.e. mocked dependencies).  Ideal for testing services and componengs.
-2. Integration - Often we want to test how components and services behavior together without mocking.  Integration testing is ideal for testing our view components.
-3. E2E - End-to-End testing uses real browsers (often multiple) and aims to simulate real user ineractions with the application.  This is done to validate our critical User Stories.
-
-To run unit and integration tests, run
+adding testing component
 
 ```
 $ yarn run test:unit
@@ -134,31 +122,3 @@ $ yarn run serve
 
 **Note: it is recommended you run this command from the master branch or a tag.  By Default this proxies with the
  webpack-dev-server proxy.**
-
-
-## Dependency Management
-Build packages (like Webpack) are installed through Yarn into _package.json_, using
-
-```
-$ yarn add <package-name>  --dev
-```
-
-Dependencies for the application (like Angular) are installed by running
-
-```
-$ yarn add <package-name>
-```
-
-
-## Continuous Integration
-**//TODO Document Your Continuous Integration Environment Here**
-
-
-## Release Procedure
-**//TODO Document Your Release Procedure Here**
-
-
-## AWS Info
-**//TODO Document Your AWS Info here (NO CREDENTIALS!!!!)**
-* s3 bucket -
-* cloudfront distribution -
