@@ -4,7 +4,8 @@ import './components/bootstrap/bootstrap.module';
 angular
   .module('tgh', [
     uirouter,
-    'tgh.component.bootstrap'
+    'tgh.component.bootstrap',
+    'ngSanitize'
   ]).config(($urlRouterProvider, $locationProvider) => {
     'ngInject';
 

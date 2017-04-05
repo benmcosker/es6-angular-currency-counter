@@ -2,7 +2,7 @@ export default class HomeComponent {
   constructor() {
     this.template = require('./home.component.html');
     this.restrict = 'E';
-    this.controller = [HomeComponentController];
+    this.controller = ['ConversionService', 'ValueService', HomeComponentController];
     this.controllerAs = 'vm';
     this.bindToController = true;
     this.scope = {
@@ -12,14 +12,11 @@ export default class HomeComponent {
 }
 
 class HomeComponentController {
-  constructor (ValueService, conversionService) {
+  constructor (ConversionService, ValueService) {
     'ngInject';
 
-    this.valueService = ValueService;
-    this.conversionService = conversionService;
-    /* eslint-disable no-console */
-    console.log(this.conversionService().getUnits());
-    /* eslint-enable no-console */
+    this.ValueService = ValueService;
+    this.ConversionService = ConversionService;
   }
 
   validateInput(form) {
@@ -27,7 +24,7 @@ class HomeComponentController {
     let vm = this;
     let currencyEntered = form.$modelValue;
 
-    vm.converted = this.valueService().getUnits();
+    vm.converted = this.ValueService.getUnits();
 
     if (currencyEntered.indexOf('£') !== -1 && currencyEntered.indexOf('p') === -1) {
 
@@ -70,7 +67,7 @@ class HomeComponentController {
   }
 
   convertCurrency (input) {
-    this.conversionService().currencyExchanger(input);
+    this.ConversionService.currencyExchanger(input);
   }
 
   resetForm (form) {

@@ -32,6 +32,7 @@ export default class ValueService {
         'denomination': 0.01
       }
     ];
+    this.getUnits();
   }
 
   getUnits() {
