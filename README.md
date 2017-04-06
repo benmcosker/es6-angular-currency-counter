@@ -1,4 +1,4 @@
-# angularjs-webpack-seed (seed-webapp-1.0)
+# es6-angular-cuurency converter using angularjs-webpack-seed (seed-webapp-1.0)
 Adaption of the AngularJS and Webpack Seed Project for The Greenhouse that retools a basic Angular ES5 test and moves it into ES6.  For reference the 
 Grteenhouse project lives at:
 https://github.com/thegreenhouseio/angularjs-webpack-seed
